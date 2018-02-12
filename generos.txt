@@ -1,0 +1,8 @@
+Acción
+Aventura
+Carreras
+Deportes
+Estrategia
+Rol
+Simuladores
+Multijugador

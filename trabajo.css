@@ -1,0 +1,822 @@
+﻿@charset "utf-8";
+/* José Criado Miguel */
+/* Raúl Piorno Ramos */
+
+/*----------------------------RESETEO CSS----------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+:focus { outline: 0;}
+a, a:link, a:visited, a:hover, a:active{text-decoration:none}
+table { border-collapse: separate;border-spacing: 0;}
+th, td {text-align: left; font-weight: normal;}
+img, iframe {border: none; text-decoration:none;}
+ol, ul {list-style: none;}
+input, textarea, select, button {font-size: 100%;font-family: inherit;}
+select {margin: inherit;}
+hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*----------------------------Agregacion de fuente----------------------------*/
+@font-face {
+    font-family: "hacked";
+    src: url(HACKED.ttf) format("truetype");
+}
+
+/*----------------------------INICIO CSS----------------------------*/
+
+body {
+	background-color: #232323;
+	color: white;
+	font-family: "Calibri";
+	font-size: 80%;
+}
+
+.contenido {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.contenido2 {
+	width: 600px;
+	float: left;
+}
+
+.contenido3 {
+	width: 380px;
+	float: right;
+	background-image: url( 'imagenes/fondo3.jpg' );
+	padding: 15px;
+	line-height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 10px;
+}
+
+.contenido4-izq {
+	width: 296px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.contenido4-der {
+	width: 296px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+	.contenido{
+		width:100%;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	.contenido2{
+		margin-right: 10px;
+		width:100%;
+	}
+	
+	.contenido3{
+		position: relative;
+		float: left;
+	}
+	
+	.no-estira {
+		width:600px;
+	}
+}
+
+@media (max-width: 600px) {
+	.contenido4-izq {
+		width: 100%;
+		float: none;
+	}
+
+	.contenido4-der, .no-estira {
+		width: 100%;
+	}
+}
+
+a, button, .btn {
+	cursor: pointer;
+}
+
+h2 {
+	font-family: "Calibri";
+	font-size: 3em;
+	margin-top: 30px;
+	margin-bottom:10px;
+}
+
+h3 {
+	font-family: "Calibri";
+	font-size: 2em;
+	margin-top: 30px;
+	margin-bottom:10px;
+	background-image: url( imagenes/subrayado.png );
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+.redondeado {
+	border-radius: 10px;
+}
+
+/*inicio---cabecera*/
+.cabecera {
+	background-color: #282828;
+	height: 90px;
+	padding:10px;
+}
+
+h1 a {
+	color: white;
+	font-size: 3.5em;
+	font-family: "hacked";
+	top: 100px;
+	text-align: center;	
+}
+
+h1 a:hover {
+	color: white;	
+}
+
+h1 img {
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+
+.centro {
+	width:200px;
+	margin: 0 auto;
+}
+
+.login {
+	color: #4C6B22 !important;
+	float: right;
+}
+
+.login:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	color: #A4D007 !important;
+}
+
+.cabecera .dropdown {
+	float: right;
+	top: -20px;
+}
+
+.cabecera .btn-secondary {
+    color: #A4D007;
+    background-color: #4C6B22;
+    border-color: #4C6B22;
+	cursor: pointer;
+}
+
+.show > .btn-secondary.dropdown-toggle {
+    background-color: #A4D007;
+	color: white;
+    border-color: #4C6B22;
+}
+
+.dropdown-menu {
+	color: white;
+	background-color: #4C6B22;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #4C6B22;
+}
+
+@media (max-width: 1000px) {
+	.cabecera .dropdown {
+		top: 25px;
+	}
+}
+/*fin---cabecera*/
+
+/*inicio---barra de paginas*/
+navbar a {
+	font-family: "Calibri";
+}
+
+button {
+	margin-bottom: 5px;
+}
+
+.navbar {
+	padding-left: 0;
+	width: 1000px;
+	padding-right: 0;
+}
+
+.navbar-dark .navbar-toggler{
+	color: #257CAD;
+	border-color: #257CAD;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #257CAD;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+	color: white;
+	background-color: #257CAD;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link.active:hover {
+	color:#232323;
+} 
+
+@media (max-width: 1000px) {
+	.navbar {
+		margin-left: 5px;
+		width:auto;
+		padding-right: 5px;
+	}
+}
+/*fin---barra de paginas*/
+
+/*inicio---barra lateral*/
+.lateral {
+	float: left;
+	clear: both;
+	width: 120px;
+	text-align: right;
+	margin-left: 80px;
+}
+
+.lateral h4 {
+	color: white;
+	font-size: 160%;
+}
+
+.lateral p {
+	color: white;
+	font-size: 120%;
+}
+
+.lateral a {
+	color: #007BFF;
+	font-size: 110%;
+}
+
+
+
+@media (max-width: 1450px) {
+	.lateral{
+		float: initial;
+		display: inline-block;
+		width: 100%;
+		margin-left: 5px;
+		text-align: center;
+	}
+	
+	.elem-lateral1{
+		display: block;
+	}
+	
+	.elem-lateral2{
+		display: inline-block;
+	}
+	
+	.lateral h4 {
+		margin-left:3px;
+		margin-right:8px;
+	}
+
+	.lateral p {
+		margin-left:3px;
+		margin-right:3px;
+	}
+
+	.lateral a {
+		margin-left:3px;
+		margin-right:3px;
+	}
+}
+
+/*inicio---barra lateral*/
+
+/*inicio---añadir al carro*/
+.boton-accion {
+	position:relative;
+	white-space: nowrap;
+	background-color: black;
+	border-radius: 3px;
+	vertical-align: bottom;
+	display: inline-block;
+	padding: 2px 2px 2px 0px;
+	float:right;
+	right: 15px;
+	bottom: 20px;
+}
+
+.precio-juego {
+	background-color: #000000;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 24px;
+	display: inline-block;
+	margin-left: 2px;
+	vertical-align: middle;
+	font-size: 1.2em;
+}
+
+.añadir-carro {
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.añadir-carro-enlace{
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	color: #A4D007;
+	background-color: #4C6B22;
+	font-size: 1.2em;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.añadir-carro-enlace:hover {
+	color: white;
+}
+
+.comprado {
+	color: white;
+	background-color: #626366;
+	font-size: 1.2em;
+	padding-left: 3px;
+	padding-right: 3px;
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+}
+/*fin---añadir al carro*/
+
+/*inicio---carrusel*/
+.carousel .carousel-inner {
+	border-radius: 10px;
+}
+
+.carousel-indicators .active {
+	background-color: #257CAD;
+}
+/*fin---carrusel*/
+
+/*precio*/
+.precio-verde {
+	color: #A4D007;
+	background-color: #4C6B22;
+	border-radius: 4px;
+	font-size: 130%;
+	padding-left: 2px;
+	padding-right: 2px;
+	position: absolute;
+}
+
+/*inicio---tarjetas*/
+.card{
+	border-color: #232323;
+	background-color: #232323;
+	text-align: center;
+}
+
+.card-deck .card {
+	margin-left: 11px;
+	margin-right: 11px;
+}
+
+.card-deck .card .card-body {
+	background-image: url( 'imagenes/fondo1.jpg' );
+	color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	height: 117.533px;
+}
+
+.card-img-top {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.card-title {
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.card-deck .card-body .precio-verde {
+	left: 0;
+	margin-top: -20px;
+	border-top-left-radius: 0;
+}
+
+@media (max-width: 1000px) {
+	.card-deck .card {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.card-deck {
+		margin-left: 0;
+	}
+}
+/*fin---tarjetas*/
+
+/*inicio---listas*/
+.lista {
+	width: 1000px !important;
+	flex-direction: row;
+	text-align: left;
+	height: 112.6px;
+	color: white;
+}
+
+.lista .card-body {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	background-image: url( 'imagenes/fondo2.png' );
+}
+
+.lista .card-img-top {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 0px;
+}
+
+.lista .card-img-top {
+		width: 200px;
+}
+
+.cuesta {
+	position: absolute;
+	right: 30px;
+	top: 40%;
+}
+
+.lista .precio-verde {
+	right: 35px;
+}
+
+.nuevo-precio-card {
+	font-size: 1.5em;
+}
+
+@media (max-width: 1000px) {
+	.lista {
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.lista .precio-verde {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.nuevo-precio-card {
+		display: none;
+	}
+}
+/*fin---listas*/
+.texto {
+	font-family: "Motiva Sans", Sans-serif;
+	font-size: 14px;
+	text-align: justify;
+}
+
+.gris {
+		color: #626366;
+}
+
+.derecha {
+	margin-left: 80px;
+}
+
+.pegi {
+	float: left;
+}
+
+h4 {
+	color: #257CAD;
+	font-size: 1.2em;
+	margin-bottom:6px;
+}
+
+/*inicio---login-usuario*/
+.contenido5-izq {
+	width: 470px;
+	float: left;
+}
+
+.contenido5-der {
+	width: 470px;
+	float: right;
+	margin-bottom: 10px;
+}
+
+.fijo-abajo{
+	position: fixed;
+	bottom:0;
+}
+
+@media (max-width: 1000px) {
+	.contenido-f {
+		float: none;
+	} 
+
+	.contenido5-izq {
+		margin: 0 auto;
+		margin-bottom: 30px;
+		float: none;
+	}
+
+	.contenido5-der {
+		margin: 0 auto;
+		margin-top: 30px;
+		float: none;
+	}
+}
+
+@media (max-width: 470px) {
+	.contenido5-izq {
+		width: 100%
+	}
+
+	.contenido5-der {
+		width: 100%
+	}
+}
+/*fin---login-usuario*/
+
+/*inicio---tus juegos*/
+.horas-tus-juegos {
+	text-align: right;
+	margin-bottom: 0;
+}
+/*fin--tus juegos*/
+
+/*inicio---cesta*/
+.title-cesta {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	margin-top: -10px;
+}
+
+.t-precio {
+	float: right; 
+	margin-right: 3.5%;
+}
+
+.precio-texto-cesta {
+	float: right;
+	color: black;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 14%;
+	color: #A4D007;
+}
+
+.cant-texto-cesta {
+	float: right;
+	color: black;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 4%;
+}
+
+select option {
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.total {
+	font-size: 2em;
+	text-align: right;
+	margin-right: 50px;
+}
+
+.boton-verde {
+    color: #A4D007;
+    background-color: #4C6B22;
+    border-color: #4C6B22;
+	cursor: pointer;
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
+	margin-bottom:50px;
+}
+
+.boton-verde:hover {
+    color: white;
+    background-color: #4C6B22;
+    border-color: #4C6B22;
+}
+
+.eliminar {
+	position: absolute;
+	bottom: 5px;
+	cursor: pointer;
+	float: left;
+	border: none;
+	background-color: transparent;
+	color: white;
+}
+
+.eliminar:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+
+
+@media (max-width: 1000px) {
+	.title-cesta {
+		width: 200px;
+	}
+}
+
+@media (max-width: 550px) {
+	.t-precio, .t-cant, .precio-texto-cesta, .cant-texto-cesta {
+		display: none;
+	}
+}
+/*fin---cesta*/
+
+/*inicio---root*/
+.boton-root{
+	padding: 2px;
+	background-color: white;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+.grupo-bot-root {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+}
+
+.boton-root-añadir {
+	padding: 2px;
+	background-color: white;
+	border-radius: 5px;
+	float: right;
+	margin: 4px;
+	width: 20px;
+	height: 20px;
+}
+/*fin---root*/
+
+/*inicio---perfil*/
+.perfil {
+	font-size:1.5em;
+	line-height: 2;
+	margin-left: 10px;
+}
+
+.boton-perfil {
+	width: 13px;
+	height:13px;
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+	cursor: pointer;
+	display: inline;
+}
+
+.boton-perfil_b {
+	width: 13px;
+	height:13px;
+	margin: 0;
+	padding: 0;
+}
+
+.fondo {
+	background-color: transparent;
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.boton-cerrar {
+	border-radius: 5px;
+	color: #A4D007;
+    background-color: #4C6B22;
+	border-color: transparent;
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+}
+
+.boton-eliminar {
+	border-radius: 5px;
+	color: #59161C;
+    background-color: #DC3545;
+	border-color: transparent;
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+}
+
+.boton-cerrar:hover {
+	color: #232323;
+}
+
+.boton-eliminar:hover {
+	color: white;
+}
+/*fin---perfil*/
+
+/*inicio---comentarios*/
+.comentario {
+	background: linear-gradient(to right, #16202D , #232323);
+	border-radius: 5px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.fecha {
+	font-size: 80%;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+
+.btn-comentario {
+	background-color: transparent;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.btn-comentario:hover {
+	background-color: transparent;
+	color: white;
+	border: none;
+	text-decoration: underline;
+}
+
+.form-comentario {
+	background-color: transparent;
+	color: white;
+	border: none;
+}
+
+/*fin---comentarios*/
+
+footer {
+	clear: both;
+	bottom: 0;
+	width: 100%;
+	background-color: #282828;
+	padding: 10px;
+	margin: 0;
+	margin-top: 50px !important;
+	text-align: center;
+}
